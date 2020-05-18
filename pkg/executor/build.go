@@ -181,12 +181,12 @@ func (s *stageBuilder) populateCompositeKey(command fmt.Stringer, files []string
 	}
 	// Add the next command to the cache key.
 	compositeKey.AddKey(resolvedCmd)
-	switch v := command.(type) {
-	case *commands.CopyCommand:
-		compositeKey = s.populateCopyCmdCompositeKey(command, v.From(), compositeKey)
-	case *commands.CachingCopyCommand:
-		compositeKey = s.populateCopyCmdCompositeKey(command, v.From(), compositeKey)
-	}
+	// switch v := command.(type) {
+	// case *commands.CopyCommand:
+	// 	compositeKey = s.populateCopyCmdCompositeKey(command, v.From(), compositeKey)
+	// case *commands.CachingCopyCommand:
+	// 	compositeKey = s.populateCopyCmdCompositeKey(command, v.From(), compositeKey)
+	// }
 
 	srcCtx := s.opts.SrcContext
 
